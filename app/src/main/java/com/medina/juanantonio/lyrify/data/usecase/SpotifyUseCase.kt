@@ -116,4 +116,17 @@ class SpotifyUseCase @Inject constructor(
         val token = dataStoreManager.getString(SPOTIFY_ACCESS_TOKEN)
         spotifyManager.pause(token)
     }
+
+        suspend fun getCurrentPlayingTrackWithRetry(): SpotifyCurrentTrack? {
+        val token = dataStoreManager.getString(SPOTIFY_ACCESS_TOKEN)
+        val (requestCode, currentTrack) = spotifyManager.getUserCurrentTrack(token)
+        
+        // Auto-refresh token if expired
+        if (requestCode == 401) {
+            refreshAccessToken()
+            return getCurrentPlayingTrack()
+        }
+
+        return currentTrack
+    }
 }

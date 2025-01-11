@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">Lyrify</string>
-
+    <string name="app_name">Caroke</string>
     <string name="lyrics_not_available">No Lyrics Available.</string>
     <string name="synced">SYNCED</string>
     <string name="unsynced">UNSYNCED</string>
+
+    <string name="car_app_name">Caroke Auto</string>
+    <string name="car_notification_channel_name">Caroke Playback</string>
+    <string name="car_notification_channel_description">Control Caroke music playback</string>
+    <string name="car_previous">Previous</string>
+    <string name="car_play">Play</string>
+    <string name="car_pause">Pause</string>
+    <string name="car_next">Next</string>
+    <string name="car_no_lyrics">No lyrics available</string>
 </resources>

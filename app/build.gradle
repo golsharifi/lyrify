@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         applicationId "com.medina.juanantonio.lyrify"
-        minSdk 24
+        minSdk 29
         targetSdk 33
         versionCode 3
         versionName "1.2.1"
@@ -110,6 +110,15 @@ dependencies {
 
     // Fuel
     implementation 'com.github.kittinunf.fuel:fuel:2.3.1'
+
+    // Android Auto
+    def car_app_version = "1.2.0"
+    implementation "androidx.car.app:app:$car_app_version"
+    implementation "androidx.car.app:app-projected:$car_app_version"
+    implementation "androidx.car.app:app-testing:$car_app_version"
+    
+    // Media support
+    implementation "androidx.media:media:1.6.0"
 
     // Spotify
     implementation 'com.spotify.android:auth:1.2.6'
